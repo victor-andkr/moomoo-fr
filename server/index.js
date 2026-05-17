@@ -23,8 +23,8 @@ const colimit = new ConnectionLimit(4);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const CLIENT_DIST_DIR = path.resolve(__dirname, "../public");
-const INDEX = path.join(CLIENT_DIST_DIR, "html/play.html");
+const CLIENT_DIST_DIR = path.resolve(__dirname, "../deploy/_site");
+const INDEX = path.join(CLIENT_DIST_DIR, "game.html");
 const PORT = Number(process.env.PORT ?? 3000);
 const HOST = process.env.HOST ?? "0.0.0.0";
 const SERVER_START_TIME = Date.now();
