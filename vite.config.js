@@ -16,7 +16,8 @@ export default defineConfig(async ({ command, mode }) => {
           game: 'game.html',
         },
         output: {
-          format: "iife"
+          format: "iife",
+          inlineDynamicImports: false
         }
       }
     },
