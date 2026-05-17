@@ -16,7 +16,7 @@ function resolveSandboxFlag() {
     if (!hasProcess) return false;
     var env = process.env;
     if (!env) return false;
-    return env.MOOMOO_SANDBOX === "1";
+    return env.MOOMOO_SANDBOX === "1" || env.MOOMOO_SANDBOX === "1";
 }
 
 // Flattens grouped config and validates no duplicate keys
@@ -181,7 +181,7 @@ var groupedConfig = {
     animals: {
         animalCount: 100000,  // deprecated - use animalSpawnPlan
         aiTurnRandom: 0.06,
-        cowNames: ["Sid", "Steph", "Bmoe", "Romn", "Jononthecool", "Fiona", "Vince", "Nathan", "Nick", "Flappy", "Ronald", "Otis", "Pepe", "Mc Donald", "Theo", "Fabz", "Oliver", "Jeff", "Jimmy", "Franck"],
+        cowNames: ["Sid", "Steph", "Bmoe", "Romn", "Jononthecool", "Fiona", "Vince", "Nathan", "Nick", "Flappy", "Ronald", "Otis", "Pepe", "Mc Donald", "Theo", "Fabz", "Oliver", "Jeff", "Jimmy"],
         animalSpawnPlan: animalSpawnPlan
     },
 
