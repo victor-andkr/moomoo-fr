@@ -447,7 +447,7 @@ app.ws("/ws", async (socket, req) => {
                     break;
                 }
                 case "0": {
-                    emit("0");
+                    await emit("0");
                     break;
                 }
                 case "p": {
