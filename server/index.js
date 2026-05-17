@@ -309,20 +309,20 @@ app.ws("/ws", async (socket, req) => {
                             if (type) {
                                 if (!player.tails[id] && player.points >= tail.price) {
                                     player.tails[id] = 1;
-                                    emit("5", 0, id, 1);
+                                    await emit("5", 0, id, 1);
                                 }
                             } else {
                                 if (player.tails[id]) {
                                     player.tail = tail;
                                     player.tailIndex = player.tail.id;
-                                    emit("5", 1, id, 1);
+                                    await emit("5", 1, id, 1);
                                 }
                             }
                         } else {
                             if (id == 0) {
                                 player.tail = {};
                                 player.tailIndex = 0;
-                                emit("5", 1, 0, 1);
+                                await emit("5", 1, 0, 1);
                             }
                         }
                     } else {
@@ -340,20 +340,20 @@ app.ws("/ws", async (socket, req) => {
                                         }
                                     }
                                     player.skins[id] = 1;
-                                    emit("5", 0, id, 0);
+                                    await emit("5", 0, id, 0);
                                 }
                             } else {
                                 if (player.skins[id]) {
                                     player.skin = hat;
                                     player.skinIndex = player.skin.id;
-                                    emit("5", 1, id, 0);
+                                    await emit("5", 1, id, 0);
                                 }
                             }
                         } else {
                             if (id == 0) {
                                 player.skin = {};
                                 player.skinIndex = 0;
-                                emit("5", 1, 0, 0);
+                                await emit("5", 1, 0, 0);
                             }
                         }
                     }
