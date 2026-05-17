@@ -18,7 +18,8 @@
     "express-ws": "^5.0.2",
     "msgpack-lite": "^0.1.26",
     "nanotimer": "^0.3.15",
-    "vite": "^6.2.2"
+    "vite": "^6.2.2",
+    "vite-plugin-node-polyfills": "^0.22.0"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
