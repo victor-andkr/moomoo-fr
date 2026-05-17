@@ -1,20 +1,15 @@
 import { defineConfig } from "vite";
-import { nodePolyfills } from 'vite-plugin-node-polyfills';
 
 // https://vitejs.dev/config/
 export default defineConfig(async ({ command, mode }) => {
   return {
-    plugins: [
-      nodePolyfills({
-        // Whether to polyfill specific globals.
-        globals: {
-          process: true,
-        },
-      }),
-    ],
+    define: {
+      'process.env': '{}',
+      'global': 'globalThis',
+    },
     build: {
       outDir: "deploy/_site",
-      target: "esnext",
+      target: "es2015",
       rollupOptions: {
         input: {
           main: 'index.html',
